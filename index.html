@@ -1,70 +1,168 @@
     <!doctype html>
-    <html class="no-js" lang="en">
+<html class="no-js" lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Kyle May</title>
-        <meta name="description" content="This is my projects website that hosts random developments I've worked on.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <title>Kyle May</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+</head>
 
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-
-    <body>
-    <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
-    Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->
-
-        <header>
-          <h1 id="header">Kyle May</h1>
-          <p>Just a simple developer doing simple things.</p>
-        </header
-
-        <section id="projects">
-            <div class="row">
-              <div class="column">
-                <div class="content">
-                  <img src="breakout.png" alt="Breakout Game" style="width:100%">
-                  <h3>Breakout Game</h3>
-                  <p>A simple recreation of Breakout in Javascript</p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <img src="pong.png" alt="Pong Game" style="width:100%">
-                  <h3>Pong</h3>
-                  <p>A simple recreation of Pong in Javascript</p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <img src="networkCalc.png" alt="Network Calculator" style="width:100%">
-                  <h3>Network Calculator</h3>
-                  <p>A simple subnet calculator in C++</p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <img src="paint.png" alt="Paint App" style="width:100%">
-                  <h3>Paint</h3>
-                  <p>A simple painting application in Javascript</p>
-                </div>
-              </div>
+<body>
+    <!-- NAVBAR -->
+    <div class="block">
+        <nav class="nav">
+            <div class="nav-left">
+                <a href="" class="nav-item">
+                    <h1 class="title is-4">Kyle May</h1>
+                </a>
             </div>
 
-        <!-- Google Analytics: -->
-        <script>
-        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-    </body>
+            <div class="nav-center">
+                <a href="https://github.com/kylelmay" class="nav-item">
+                    <span class="icon">
+                        <i class="fa fa-github"></i>
+                    </span>
+                </a>
+                <a href="https://www.linkedin.com/in/kylelmay" class="nav-item">
+                    <span class="icon">
+                        <i class="fa fa-linkedin"></i>
+                    </span>
+                </a>
+            </div>
 
-    </html>
+            <div class="nav-right nav-menu">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">About</a>
+                <a href="#" class="nav-item">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- MAIN HEADING -->
+    <section class="hero is-link is-medium is-info">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-1">Kyle May</h1>
+          <h2 class="title is-3">A simple developer doing simple things</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS DISPLAY -->
+    <div class="box cta">
+          <p class="has-text-centered">
+              <span class="tag is-primary">New</span> Breakout clone has been added to the games library.
+          </p>
+      </div>
+      <section class="container">
+          <div class="columns features">
+              <div class="column is-one-quarter">
+                  <div class="card is-shady">
+                      <div class="card-image has-text-centered">
+                          <img src="assets/breakout.jpg">
+                      </div>
+                      <div class="card-content">
+                          <div class="content">
+                              <h4>Breakout Game</h4>
+                              <p>A simple Breakout game in Javascript</p>
+                              <p><a href="#">Play</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="is-one-quarter">
+                  <div class="card is-shady">
+                      <div class="card-image has-text-centered">
+                          <img src="assets/pong.jpg">
+                      </div>
+                      <div class="card-content">
+                          <div class="content">
+                              <h4>Pong Game</h4>
+                              <p>A simple Pong game in Javascript</p>
+                              <p><a href="#">Learn more</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="column is-one-quarter">
+                  <div class="card is-shady">
+                      <div class="card-image has-text-centered">
+                          <img src="assets/netcalc.jpg">
+                      </div>
+                      <div class="card-content">
+                          <div class="content">
+                              <h4>Subnet Calculator</h4>
+                              <p>A simple subnet calculator in C++</p>
+                              <p><a href="#">Learn more</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="column is-one-quarter">
+                  <div class="card is-shady">
+                      <div class="card-image has-text-centered">
+                          <img src="assets/bcexample.jpg">
+                      </div>
+                      <div class="card-content">
+                          <div class="content">
+                              <h4>Blockchain JS</h4>
+                              <p>A simple blockchain implementation in Javascript</p>
+                              <p><a href="#">Learn more</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+    <!-- ARTICLES DISPLAY -->
+    <section class="section">
+        <div class="container">
+            <div class="block">
+              <div class="card">
+                <div class="card-content">
+                  <p class="title">Latest Articles</p>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <span>
+                      <a href=""><i class="fa fa-twitter"></i>Twitter</a>
+                    </span>
+                  </p>
+                  <p class="card-footer-item">
+                    <span>
+                      <a href=""><i class="fa fa-facebook"></i>Facebook</a>
+                    </span>
+                  </p>
+                </footer>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGINATION -->
+    <div class="block">
+      <nav class="pagination">
+        <a href="" class="pagination-previous" disabled>Previous</a>
+        <a href="" class="pagination-next">Next page</a>
+        <ul class="pagination-list">
+          <li><a href="" class="pagination-link is-current">1</a></li>
+          <li><a href="" class="pagination-link">2</a></li>
+          <li><a href="" class="pagination-link">3</a></li>
+        </ul>
+      </nav>
+    </div>
+
+</body>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Licensing for </strong><a href="https://kylelmay.github.io">Kyle May</a>. All source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+</html>
