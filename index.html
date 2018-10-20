@@ -1,168 +1,617 @@
-<!doctype html>
-<html class="no-js" lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Kyle May</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kyle May</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/personal.css">
+  <script async type="text/javascript" src="bulma.js"></script>
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <div class="block">
-        <nav class="nav">
-            <div class="nav-left">
-                <a href="" class="nav-item">
-                    <h1 class="title is-4">Kyle May</h1>
-                </a>
-            </div>
-
-            <div class="nav-center">
-                <a href="https://github.com/kylelmay" class="nav-item">
-                    <span class="icon">
-                        <i class="fa fa-github"></i>
-                    </span>
-                </a>
-                <a href="https://www.linkedin.com/in/kylelmay" class="nav-item">
-                    <span class="icon">
-                        <i class="fa fa-linkedin"></i>
-                    </span>
-                </a>
-            </div>
-
-            <div class="nav-right nav-menu">
-                <a href="#" class="nav-item">Home</a>
-                <a href="#" class="nav-item">About</a>
-                <a href="#" class="nav-item">Contact</a>
-            </div>
-        </nav>
+  <!-- Navigation bar -->
+  <nav class="navbar is-link is-fixed-top">
+    <div class="navbar-brand">
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
-    <!-- MAIN HEADING -->
-    <section class="hero is-link is-medium is-info">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title is-1">Kyle May</h1>
-          <h2 class="title is-3">A simple developer doing simple things</h2>
-        </div>
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#about">
+          <span class="icon">
+            <i class="fas fa-info"></i>
+          </span>
+          <span>About</span>
+        </a>
+        <a class="navbar-item" href="#services">
+          <span class="icon">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span>Services</span>
+        </a>
+        <a class="navbar-item" href="#resume">
+          <span class="icon">
+            <i class="fas fa-file-alt"></i>
+          </span>
+          <span>Resume</span>
+        </a>
+        <a class="navbar-item" href="#portfolio">
+          <span class="icon">
+            <i class="fas fa-th-list"></i>
+          </span>
+          <span>Portfolio</span>
+        </a>
+        <a class="navbar-item" href="#contact">
+          <span class="icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span>Contact</span>
+        </a>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <!-- PROJECTS DISPLAY -->
-    <div class="box cta">
-          <p class="has-text-centered">
-              <span class="tag is-primary">New</span> Breakout clone has been added to the games library.
-          </p>
+  <!-- Header -->
+  <section class="hero is-link is-fullheight is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title is-1">Kyle May</h1>
+        <h2 class="subtitle is-3">Web development | Blockchain | Digital Strategy</h2>
       </div>
-      <section class="container">
-          <div class="columns features">
-              <div class="column is-one-quarter">
-                  <div class="card is-shady">
-                      <div class="card-image has-text-centered">
-                          <img src="assets/breakout.jpg">
-                      </div>
-                      <div class="card-content">
-                          <div class="content">
-                              <h4>Breakout Game</h4>
-                              <p>A simple Breakout game in Javascript</p>
-                              <p><a href="https://kylelmay.github.io/Games/Breakout/game">Play Game</a></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="is-one-quarter">
-                  <div class="card is-shady">
-                      <div class="card-image has-text-centered">
-                          <img src="assets/pong.jpg">
-                      </div>
-                      <div class="card-content">
-                          <div class="content">
-                              <h4>Pong Game</h4>
-                              <p>A simple Pong game in Javascript</p>
-                              <p><a href="https://kylelmay.github.io/Games/pong/game">Play Game</a></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="column is-one-quarter">
-                  <div class="card is-shady">
-                      <div class="card-image has-text-centered">
-                          <img src="assets/netcalc.jpg">
-                      </div>
-                      <div class="card-content">
-                          <div class="content">
-                              <h4>Subnet Calculator</h4>
-                              <p>A simple subnet calculator in C++</p>
-                              <p><a href="#">Learn more</a></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="column is-one-quarter">
-                  <div class="card is-shady">
-                      <div class="card-image has-text-centered">
-                          <img src="assets/bcexample.jpg">
-                      </div>
-                      <div class="card-content">
-                          <div class="content">
-                              <h4>Blockchain JS</h4>
-                              <p>A simple blockchain implementation in Javascript</p>
-                              <p><a href="https://kylelmay.github.io/tutorials/blockchain/javascript-blockchain/verify">Learn more</a></p>
-                          </div>
-                      </div>
-                  </div>
+    </div>
+  </section>
+
+  <!-- ABOUT HEADER-->
+  <section class="hero" id="about">
+    <!-- Title -->
+    <div class="hero-body">
+        <div class="container ">
+          <h3 class="title is-2 has-text-centered">About Me</h3>
+          <h4 class="subtitle is-5 has-text-centered">Just a simple developer doing simple things.</h4>
+          <div class="container">
+            <p class="has-text-centered">Web and blockchain developer with more than <strong>2 years</strong> of well-rounded experience currently wrapping up two
+             degrees in the fields of <strong>Software Development</strong>, and <strong>Database Administration</strong>.
+             I have a strong foundational understanding of computer science and a love for <strong>Martial Arts</strong>.
+              Looking for an opportunity to support and build awesome technologies, as well as be involved in an organization that
+              enjoys taking on challenging and fast paced projects.</p>
+          </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-heading">
+      <h3 class="title is-2">Portfolio</h3>
+      <h4 class="subtitle is-5">Recent Projects</h4>
+    </div>
+    <br>
+
+    <div class="container">
+      <div class="columns">
+
+          <!-- PONG GAME -->
+            <div class="column">
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span>Pong Game <small>(Web)</small></span>
+                    <span class="is-pulled-right">
+                      <a href="https://github.com/kylelmay/Simple-Projects/tree/master/Tennis%20Game">
+                        <span class="tag is-default">v0.3</span>
+                      </a>
+                      <span class="tag is-default">Desktop</span>
+                      <span class="tag is-warning">JavaScript</span>
+                      <span class="tag is-danger">WIP</span>
+                    </span>
+                  </p>
+                </header>
+                <div class="card-content">
+                  <figure class="image">
+                    <img src="assets/pong.jpg" alt="Pong game screenshot">
+                  </figure>
+                </div>
+                <footer class="card-footer">
+                  <a href="Games/pong/game" class="card-footer-item">Play</a>
+                  <a href="https://github.com/kylelmay/Simple-Projects/blob/master/Tennis%20Game/js/tennis.js" class="card-footer-item">Source
+                    Code</a>
+                </footer>
               </div>
           </div>
 
-    <!-- ARTICLES DISPLAY -->
-    <section class="section">
-        <div class="container">
-            <div class="block">
+              <!-- SUBNET CALCULATOR -->
+          <div class="column">
               <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span>Subnet Calculator</span>
+                    <span class="is-pulled-right">
+                      <a href="https://github.com/kylelmay/Simple-Projects/blob/master/Network%20Calculator/Network%20Calc2.cpp">
+                        <span class="tag is-default">v0.5.1</span>
+                      </a>
+                      <span class="tag is-default">Desktop</span>
+                      <span class="tag is-warning">C++</span>
+                      <span class="tag is-danger">WIP</span>
+
+                    </span>
+                  </p>
+                </header>
                 <div class="card-content">
-                  <p class="title">Latest Articles</p>
+                  <figure class="image">
+                    <img src="assets/netcalc.jpg" alt="Subnet calculator screenshot">
+                  </figure>
                 </div>
                 <footer class="card-footer">
-                  <p class="card-footer-item">
-                    <span>
-                      <a href=""><i class="fa fa-twitter"></i>Twitter</a>
-                    </span>
-                  </p>
-                  <p class="card-footer-item">
-                    <span>
-                      <a href=""><i class="fa fa-facebook"></i>Facebook</a>
-                    </span>
-                  </p>
+                  <a href="#" class="card-footer-item">No Preview</a>
+                  <a href="https://github.com/kylelmay/Simple-Projects/blob/master/Network%20Calculator/Network%20Calc2.cpp" class="card-footer-item">
+                      Source Code
+                  </a>
                 </footer>
               </div>
-            </div>
+          </div>
+
+              <!-- BREAKOUT GAME -->
+          <div class="column">
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span>Breakout Game</span>
+                    <span class="is-pulled-right">
+                      <a href="https://github.com/kylelmay/Simple-Projects/tree/master/Breakout">
+                        <span class="tag is-default">v0.2.0</span>
+                      </a>
+                      <span class="tag is-default">Desktop</span>
+                      <span class="tag is-danger">WIP</span>
+                      <span class="tag is-warning">JavaScript</span>
+                    </span>
+                  </p>
+                </header>
+                <div class="card-content">
+                  <figure class="image">
+                    <img src="assets/breakout.jpg" alt="Breakout game screenshot">
+                  </figure>
+                </div>
+                <footer class="card-footer">
+                  <a href="Games/Breakout/game" class="card-footer-item">Play</a>
+                  <a href="https://github.com/kylelmay/Simple-Projects/tree/master/Breakout" class="card-footer-item">Source
+                    Code</a>
+                </footer>
+              </div>
+          </div>
+
+              <!-- BLOCKCHAIN JS -->
+          <div class="column">
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span>Blockchain in Javascript</span>
+                    <span class="is-pulled-right">
+                      <a href="https://github.com/kylelmay/kylelmay.github.io/tree/master/tutorials/blockchain/javascript-blockchain">
+                        <span class="tag is-default">v0.7.2</span>
+                      </a>
+                      <span class="tag is-default">Desktop</span>
+                      <span class="tag is-default">Mobile</span>
+                      <span class="tag is-warning">JavaScript</span>
+                    </span>
+                  </p>
+                </header>
+                <div class="card-content">
+                  <figure class="image">
+                    <img src="assets/bcexample.jpg" alt="Blockchain in JS screenshot">
+                  </figure>
+                </div>
+                <footer class="card-footer">
+                  <a href="tutorials/blockchain/javascript-blockchain/verify" class="card-footer-item">Preview</a>
+                  <a href="https://github.com/kylelmay/kylelmay.github.io/tree/master/tutorials/blockchain/javascript-blockchain" class="card-footer-item">Source
+                    Code</a>
+                </footer>
+              </div>
+          </div>
         </div>
-    </section>
-
-    <!-- PAGINATION -->
-    <div class="block">
-      <nav class="pagination">
-        <a href="" class="pagination-previous" disabled>Previous</a>
-        <a href="" class="pagination-next">Next page</a>
-        <ul class="pagination-list">
-          <li><a href="" class="pagination-link is-current">1</a></li>
-          <li><a href="" class="pagination-link">2</a></li>
-          <li><a href="" class="pagination-link">3</a></li>
-        </ul>
-      </nav>
+      </div>
     </div>
-
-</body>
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Licensing for </strong><a href="https://kylelmay.github.io">Kyle May</a>. All source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-    </p>
   </div>
-</footer>
+</section>
+
+<!-- Resume -->
+<div class="container" style="padding-top:1em;">
+<section class="hero is-info is-bold" id="resume">
+  <div class="hero-body">
+    <h3 class="title is-2">Resume</h3>
+    <h4 class="subtitle is-5">Employment Background</h4>
+    <a href="assets/IT_General.pdf" class="button is-link is-medium">
+      <span class="icon">
+        <i class="fas fa-file-alt"></i>
+      </span>
+      <span>Download</span>
+    </a>
+  </div>
+</section>
+</div>
+
+<!-- ABOUT INFORMATION -->
+<section class="section" id="aboutInfo">
+    <div class="container">
+        <div class="columns has-same-height" >
+          <div class="column">
+            <!-- Profile -->
+            <div class="card">
+              <div class="card-content">
+                <h3 class="title is-4">Profile</h3>
+
+                <div class="content">
+                  <table class="table-profile">
+                    <tr>
+                      <th colspan="1"></th>
+                      <th colspan="2"></th>
+                    </tr>
+                    <tr>
+                      <td>Location</td>
+                      <td>Palm Bay, FL</td>
+                    </tr>
+                    <tr>
+                      <td>Phone: </td>
+                      <td>(760) 805-5084)</td>
+                    </tr>
+                    <tr>
+                      <td>Email:</td>
+                      <td>kyle.l.may@outlook.com</td>
+                    </tr>
+                  </table>
+                </div>
+                <br>
+                <div class="buttons has-addons is-centered">
+                  <a href="https://github.com/kylelmay" class="button is-link">Github</a>
+                  <a href="https://linkedin.com/in/kylelmay" class="button is-link">LinkedIn</a>
+                  <a href="https://www.sololearn.com/Profile/627920" class="button is-link">SoloLearn</a>
+                  <a href="https://medium.com/@Kyle.May" class="button is-link">Medium</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <!-- Profile picture -->
+            <div class="card">
+                <div class="card-content skills-content">
+                <h3 class="title is-4">Certifications</h3>
+                <a href="#aboutInfo">
+                  <span class="tag is-danger">CompTIA A+</span>
+                </a>
+                <a href="#aboutInfo">
+                  <span class="tag is-danger">CompTIA Net+</span>
+                </a>
+                <a href="#aboutInfo">
+                  <span class="tag is-danger">CompTIA Sec+</span>
+                </a>
+                <a href="#aboutInfo">
+                  <span class="tag is-warning">Google AdWords Search</span>
+                </a>
+                <a href="#aboutInfo">
+                  <span class="tag is-warning">Google AdWords Video</span>
+                </a>
+                <a href="#aboutInfo">
+                  <span class="tag is-warning">Google AdWords Display</span>
+                </a>
+                <a href="#aboutInfo">
+                  <span class="tag is-warning">Google AdWords Mobile</span>
+                </a>
+                <a href="#aboutInfo">
+                  <span class="tag is-info">Microsoft Bing Ads Professional</span>
+                </a>
+                <a href="#aboutInfo">
+                  <span class="tag is-info">IBM Blockchain Foundation Developer</span>
+                </a>
+            </div>
+            </div>
+          </div>
+
+          <!-- Programming -->
+          <div class="column">
+            <div class="card">
+              <div class="card-content skills-content">
+                <h3 class="title is-4">Programming</h3>
+                <div class="content">
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>JavaScript:</strong>
+                          <br>
+                          <progress class="progress is-primary" value="50" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>JSON/XML</strong>
+                          <br>
+                          <progress class="progress is-primary" value="30" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>SQL</strong>
+                          <br>
+                          <progress class="progress is-primary" value="67" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>HTML5/CSS3</strong>
+                          <br>
+                          <progress class="progress is-primary" value="60" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>C++</strong>
+                          <br>
+                          <progress class="progress is-primary" value="66" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="card-content skills-content">
+                <h3 class="title is-4">Systems</h3>
+                <div class="content">
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>Windows</strong>
+                          <br>
+                          <progress class="progress is-primary" value="66" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>Linux</strong>
+                          <br>
+                          <progress class="progress is-primary" value="37" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>AWS</strong>
+                          <br>
+                          <progress class="progress is-primary" value="43" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>Azure</strong>
+                          <br>
+                          <progress class="progress is-primary" value="36" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>Embedded</strong>
+                          <br>
+                          <progress class="progress is-primary" value="17" max="100"></progress>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Skills tags -->
+  <!-- <br>
+        <div class="tags custom-tags">
+          <span class="tag is-light">Node.js</span><span class="tag is-light">Express.js</span><span class="tag is-light">VueJS</span><span
+            class="tag is-light">JavaScript</span><span class="tag is-light">HTML5</span><span class="tag is-light">Canvas</span><span
+            class="tag is-light">CSS3</span><span class="tag is-light">Bulma</span><span class="tag is-light">Bootstrap</span><span
+            class="tag is-light">jQuery</span><span class="tag is-light">Pug</span><span class="tag is-light">Stylus</span><span
+            class="tag is-light">SASS/SCSS</span><span class="tag is-light">Webpack</span><span class="tag is-light">Git</span><span
+            class="tag is-light">ASP.NET Web Forms</span><span class="tag is-light">MSSQL</span><span class="tag is-light">MongoDB</span><span
+            class="tag is-light">Apache Cordova</span><span class="tag is-light">Chrome Extensions</span>
+        </div> -->
+
+  <!-- Services -->
+  <section class="hero" id="services">
+    <div class="hero-body">
+        <div class="container">
+          <h3 class="title is-2 has-text-centered">Services</h3>
+        </div>
+    </div>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h4 class="title is-5">Front End Web Development</h4>
+              Develop Front End using latest standards with HTML5/CSS3 with added funtionality using JavaScript.
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h4 class="title is-5">Back End Web Development</h4>
+              Develop Back End application/service using Node.js and SQL server or Mongo DB databases.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h4 class="title is-5">Digital Marketing</h4>
+              Develop complete content, email, advertising, and creative strategies for eccommerce accross Shopify,
+              Facebook, Google, and more.
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h4 class="title is-5">Blockchain Development</h4>
+              Develop blockchains, Dapps, smart contracts, and their respective front end interfaces for Ethereum or
+              Hyperledger, using HTML5/CSS3 and JavaScript.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Achievement Level -->
+  <!-- <section class="section">
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Tweets</p>
+          <p class="title">3,456</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Following</p>
+          <p class="title">123</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Followers</p>
+          <p class="title">456K</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Likes</p>
+          <p class="title">789</p>
+        </div>
+      </div>
+    </nav>
+  </section> -->
+
+
+  <!-- Contact -->
+  <div class="container" style="padding-top:1em;">
+  </div>
+  <section class="hero is-light" id="contact">
+      <div class="hero-body">
+        <div class="container" style="padding-top:1em;">
+          <div class="section-heading">
+            <h3 class="title is-2">Get In Touch</h3>
+          </div>
+          <br>
+
+          <div class="columns">
+            <div class="column is-half">
+              <div class="box">
+                <div class="field">
+                  <label class="label">Name</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="email" placeholder="Email input" value="">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Message</label>
+                  <div class="control">
+                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                  </div>
+                </div>
+
+                <div class="field is-grouped has-text-centered">
+                  <div class="control">
+                    <button class="button is-link is-medium is-success"><span class="icon">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                      <span>Submit</span></button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-heading">
+      <p> All source code represented on this domain is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>
