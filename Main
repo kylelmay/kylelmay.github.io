@@ -1,0 +1,70 @@
+    <!doctype html>
+    <html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Kyle May</title>
+        <meta name="description" content="This is my projects website that hosts random developments I've worked on.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
+    Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+        <header>
+          <h1 id="header">Kyle May</h1>
+          <p>Just a simple developer doing simple things.</p>
+        </header
+
+        <section id="projects">
+            <div class="row">
+              <div class="column">
+                <div class="content">
+                  <img src="breakout.png" alt="Breakout Game" style="width:100%">
+                  <h3>Breakout Game</h3>
+                  <p>A simple recreation of Breakout in Javascript</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <img src="pong.png" alt="Pong Game" style="width:100%">
+                  <h3>Pong</h3>
+                  <p>A simple recreation of Pong in Javascript</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <img src="networkCalc.png" alt="Network Calculator" style="width:100%">
+                  <h3>Network Calculator</h3>
+                  <p>A simple subnet calculator in C++</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <img src="paint.png" alt="Paint App" style="width:100%">
+                  <h3>Paint</h3>
+                  <p>A simple painting application in Javascript</p>
+                </div>
+              </div>
+            </div>
+
+        <!-- Google Analytics: -->
+        <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+
+    </html>
