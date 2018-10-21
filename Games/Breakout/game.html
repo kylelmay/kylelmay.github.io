@@ -1,50 +1,88 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Kyle May</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kyle May</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+  <link rel="stylesheet" src="css/pong.css" />
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <script async type="text/javascript" src="/js/bulma.js"></script>
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <div class="block">
-        <nav class="nav">
-            <div class="nav-left">
-                <a href="" class="nav-item">
-                    <h1 class="title is-4">Kyle May</h1>
-                </a>
-            </div>
-
-            <div class="nav-center">
-                <a href="https://github.com/kylelmay" class="nav-item">
-                    <span class="icon">
-                        <i class="fa fa-github"></i>
-                    </span>
-                </a>
-                <a href="https://www.linkedin.com/in/kylelmay" class="nav-item">
-                    <span class="icon">
-                        <i class="fa fa-linkedin"></i>
-                    </span>
-                </a>
-            </div>
-
-            <div class="nav-right nav-menu">
-                <a href="#" class="nav-item">Home</a>
-                <a href="#" class="nav-item">About</a>
-                <a href="#" class="nav-item">Contact</a>
-            </div>
-        </nav>
+  <!-- Navigation bar -->
+  <nav class="navbar is-link is-fixed-top">
+    <div class="navbar-brand">
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
-    <!-- Game Canvas -->
-    <div class="block">
-        <canvas id="gameCanvas" width="800" height="600"></canvas>
-    </dic>
-    <script src="js/breakout.js"></script>
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/#about">
+          <span class="icon">
+            <i class="fas fa-info"></i>
+          </span>
+          <span>About</span>
+        </a>
+        <a class="navbar-item" href="/#services">
+          <span class="icon">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span>Services</span>
+        </a>
+        <a class="navbar-item" href="/#resume">
+          <span class="icon">
+            <i class="fas fa-file-alt"></i>
+          </span>
+          <span>Resume</span>
+        </a>
+        <a class="navbar-item" href="/#portfolio">
+          <span class="icon">
+            <i class="fas fa-th-list"></i>
+          </span>
+          <span>Portfolio</span>
+        </a>
+        <a class="navbar-item" href="/#contact">
+          <span class="icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span>Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+<!-- GAME CANVAS -->
+<section class="hero is-bold" style="padding-top:2em;" id="game">
+    <div class="hero-body">
+        <div class="container ">
+            <div class="columns">
+                <div class="column is-full">
+                    <canvas id="gameCanvas" width = "800" height = "600"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/breakout.js"></script>
 </body>
+<!-- Footer -->
+<footer class="footer">
+  <div class="section-heading">
+    <p> All source code represented on this domain is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+    </p>
+  </div>
+</footer>
+
 </html>

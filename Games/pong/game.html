@@ -33,25 +33,25 @@
           </span>
           <span>About</span>
         </a>
-        <a class="navbar-item" href="#services">
+        <a class="navbar-item" href="/#services">
           <span class="icon">
             <i class="fas fa-bars"></i>
           </span>
           <span>Services</span>
         </a>
-        <a class="navbar-item" href="#resume">
+        <a class="navbar-item" href="/#resume">
           <span class="icon">
             <i class="fas fa-file-alt"></i>
           </span>
           <span>Resume</span>
         </a>
-        <a class="navbar-item" href="#portfolio">
+        <a class="navbar-item" href="/#portfolio">
           <span class="icon">
             <i class="fas fa-th-list"></i>
           </span>
           <span>Portfolio</span>
         </a>
-        <a class="navbar-item" href="#contact">
+        <a class="navbar-item" href="/#contact">
           <span class="icon">
             <i class="fas fa-envelope"></i>
           </span>
@@ -62,12 +62,13 @@
   </nav>
 
 <!-- GAME CANVAS -->
-<section class="hero is-light is-bold" id="game">
+<section class="hero is-bold" style="padding-top:2em;" id="game">
     <div class="hero-body">
         <div class="container ">
-            <div class="column is-full">
-                <h3 class="title is-2" style="padding-top:1em;">Pong</h3>
-                <canvas id="gameCanvas" width = "800" height = "600"></canvas>
+            <div class="columns">
+                <div class="column is-full">
+                    <canvas id="gameCanvas" width = "800" height = "600"></canvas>
+                </div>
             </div>
         </div>
     </div>
@@ -75,6 +76,13 @@
 
 <script src="js/tennis.js"></script>
 </body>
-
+<!-- Footer -->
+<footer class="footer">
+  <div class="section-heading">
+    <p> All source code represented on this domain is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+    </p>
+  </div>
+</footer>
 
 </html>

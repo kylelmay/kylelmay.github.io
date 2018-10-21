@@ -21,6 +21,7 @@ var player1Score = 0;
 var player2Score = 0;
 const SCORE_TO_WIN = 3;
 
+var showingStartScreen = true;
 var showingWinScreen = false;
 
 function calculateMousePos(evt) {
@@ -38,7 +39,11 @@ function handleMouseClick(evt) {
     if (showingWinScreen) {
         player1Score = 0;
         player2Score = 0;
-        showingWinScreen = false
+        showingWinScreen = false;
+    }
+
+    if (showingStartScreen) {
+        showingStartScreen = false;
     }
 }
 
@@ -81,6 +86,9 @@ function computerMovement() {
 }
 function moveEverything() {
     if (showingWinScreen) {
+        return;
+    }
+    if (showingStartScreen) {
         return;
     }
     computerMovement();
@@ -133,13 +141,29 @@ function drawEverything() {
         canvasContext.fillStyle = "white";
 
         if (player1Score >= SCORE_TO_WIN) {
-            canvasContext.fillText("Player 1 Wins!", 350, 300);
+            canvasContext.fillText("Player 1 Wins!", 300, 300);
         } else {
-            canvasContext.fillText("Player 2 Wins!", 350, 300);
+            canvasContext.fillText("Player 2 Wins!", 300, 300);
         }
-        canvasContext.fillText("Click to Continue", 350, 500);
+        canvasContext.fillText("Click to Continue", 280, 500);
         return;
 
+    }
+
+    if (showingStartScreen) {
+        colorRect(0, 0, canvas.width, canvas.height, 'white');
+
+        canvasContext.font="30px Verdana";
+        // Create gradient
+        var gradient = canvasContext.createLinearGradient(0,0,10,0);
+        gradient.addColorStop("0","black");
+        gradient.addColorStop("0.5","blue");
+        gradient.addColorStop("1.0","green");
+
+        // Fill with gradient
+        canvasContext.fillStyle=gradient;
+        canvasContext.fillText("Start",400,300);
+        return;
     }
     drawNet();
     // This is the left player paddle

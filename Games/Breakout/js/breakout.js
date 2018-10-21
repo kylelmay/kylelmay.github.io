@@ -5,13 +5,13 @@
 /* jshint latedef:nofunc */
 
 var canvas, canvasContext;
-var brickSound, paddleSound;
+var brickSound, paddleSound, wallSound, loseSound, winSound, scoredAgainstSound;
 
 var ballX = 75;
-var ballSpeedX = 15;
+var ballSpeedX = 14;
 
 var ballY = 75;
-var ballSpeedY = 6;
+var ballSpeedY = 8;
 
 var mouseX;
 var mouseY;
@@ -20,7 +20,7 @@ const BRICK_W = 80;
 const BRICK_H = 20;
 const BRICK_COLS = 10;
 const BRICK_GAP = 2;
-const BRICK_ROWS = 14;
+const BRICK_ROWS = 8;
 var bricksLeft = 0;
 
 var brickGrid = new Array (BRICK_COLS * BRICK_ROWS);
@@ -31,6 +31,8 @@ const PADDLE_DIST_FROM_EDGE = 40;
 var paddleX = 400;
 
 var gameOver = false;
+var showingStartScreen = true;
+var showingWinScreen = false;
 var lives = 3;
 
 function sound(src) {
@@ -41,6 +43,7 @@ function sound(src) {
     this.sound.setAttribute("muted", "muted");
     this.sound.style.display = "none";
     document.body.appendChild(this.sound);
+    this.sound.volume = 0.3;
     this.play = function(){
         this.sound.play();
     }
@@ -69,8 +72,23 @@ function handleMouseClick(evt) {
     if (gameOver) {
         lives = 3;
         gameOver = false;
+        ballSpeedX = 14;
+        ballSpeedY = 8;
+        ballReset();
         brickReset();
+    }
 
+    if (showingWinScreen) {
+        lives = 3;
+        showingWinScreen = false;
+        ballSpeedX = 14;
+        ballSpeedY = 8;
+        ballReset();
+        brickReset();
+    }
+
+    if (showingStartScreen) {
+        showingStartScreen = false;
     }
 }
 
@@ -98,6 +116,10 @@ window.onload = function () {
 
     brickSound = new sound("assets/brickHit.wav");
     paddleSound = new sound("assets/paddleHit.wav");
+    loseSound = new sound("assets/youLose.flac");
+    winSound = new sound("assets/youWin.wav");
+    wallSound = new sound("assets/bounce.wav");
+    scoredAgainstSound = new sound("assets/scoredAgainst.wav");
     brickReset();
     ballReset();
 }
@@ -112,11 +134,17 @@ function ballReset () {
         gameOver = true;
     }
     ballX = canvas.width / 2;
-    ballY = canvas.height / 2;
+    ballY = canvas.height / 2 - 100;
 }
 // ---------------------------------------- MOVEMENT FUNCTIONS --------------------------------
 function moveAll () {
     if (gameOver) {
+        return;
+    }
+    if (showingStartScreen) {
+        return;
+    }
+    if (showingWinScreen) {
         return;
     }
     moveBall();
@@ -129,18 +157,24 @@ function moveBall () {
     ballY += ballSpeedY;
     if(ballX > canvas.width && ballSpeedX > 0.0) { // right
         ballSpeedX = -ballSpeedX;
+        wallSound.play();
     }
     if (ballX < 0 && ballSpeedX < 0.0){ // left
         ballSpeedX = -ballSpeedX;
+        wallSound.play();
     }
     if (ballY < 0 && ballSpeedY < 0.0) { //Top
         ballSpeedY = -ballSpeedY;
+        wallSound.play();
     }
     if (ballY > canvas.height) { // bottom
         ballReset();
         --lives;
         if (lives < 0) {
             gameOver = true;
+            loseSound.play();
+        } else {
+            scoredAgainstSound.play();
         }
     }
 }
@@ -167,7 +201,10 @@ function ballBrickHandler () {
             brickSound.play();
             brickGrid[brickIndexUnderBall] = false;
             bricksLeft--;
-            console.log(bricksLeft);
+            if (bricksLeft <= 0) {
+                showingWinScreen = true;
+                winSound.play();
+            }
 
             var prevBallX = ballX - ballSpeedX;
             var prevBallY = ballY - ballSpeedY;
@@ -225,8 +262,29 @@ function drawAll () {
     colorRect(0, 0, canvas.width, canvas.height, "#f1f1f1");
     if (gameOver) {
         // Draw Canvas
-        colorText("Game Over!", 350, 300, "Red");
-        colorText("Click to Continue", 350, 500, "Red");
+        colorText("Game Over!", 330, 300, "Red");
+        colorText("Click to Continue", 300, 500, "Red");
+        return;
+    }
+    if (showingWinScreen) {
+        // Draw Canvas
+        colorText("You Win!", 330, 300, "Green");
+        colorText("Click to Continue", 300, 500, "Green");
+        return;
+    }
+    if (showingStartScreen) {
+        colorRect(0, 0, canvas.width, canvas.height, 'white');
+
+        canvasContext.font="24px Verdana";
+        // Create gradient
+        var gradient = canvasContext.createLinearGradient(0,0,10,0);
+        gradient.addColorStop("0","black");
+        gradient.addColorStop("0.5","blue");
+        gradient.addColorStop("1.0","green");
+
+        // Fill with gradient
+        canvasContext.fillStyle=gradient;
+        canvasContext.fillText("Start",400,300);
         return;
     }
 
@@ -240,13 +298,13 @@ function drawAll () {
         // Draw bricks to canvas
         drawBricks();
 
-        // Print mouse x and y coordinates
+        /* Print mouse x and y coordinates
         var mouseBrickCol = Math.floor(mouseX / BRICK_W);
         var mouseBrickRow = Math.floor(mouseY / BRICK_H);
         var brickIndexUnderMouse = getArrayIndex(mouseBrickCol, mouseBrickRow);
         colorText("C: " + mouseBrickCol + "," + "R: " + mouseBrickRow +
                   "," + "B: " + brickIndexUnderMouse, mouseX, mouseY, "cyan")
-
+        */
         colorText("Lives: " + lives, 100, 30, "Black");
         colorText("Author: Kyle May", 500, 30, "Black");
 }
