@@ -12,30 +12,14 @@
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
   <script async type="text/javascript" src="js/bulma.js"></script>
   <style>
-      @-webkit-keyframes rotate {
-        from {
-          -webkit-transform: rotate(0deg);
-        }
-        to {
-          -webkit-transform: rotate(360deg);
-        }
-      }
-
-    img.rotate {
-        -webkit-animation-name:             rotate;
-        -webkit-animation-duration:         0.5s;
-        -webkit-animation-iteration-count:  infinite;
-        -webkit-animation-timing-function: linear;
-    }
-
-    body {
+    .bg1 {
       background-color: #ffffff;
-      background-image: url("C:/users/kylel/desktop/me/gitHub/kylelmay.github.io/assets/blog-background.svg");
+      background-image: url("/assets/blog-background.svg");
     }
   </style>
 </head>
 
-<body>
+<body class="bg1">
   <!-- Navigation bar -->
   <nav class="navbar is-link is-fixed-top">
     <div class="navbar-brand">
@@ -88,7 +72,7 @@
   </nav>
 
   <!-- HEADER If left blank adds padding to featured article -->
-  <section class="hero is-small is-small-with-navbar">
+  <section class="hero is-small is-small-with-navbar bg1">
     <div class="hero-body">
       <div class="container">
       </div>
@@ -96,7 +80,7 @@
   </section>
 
   <!-- FEATURED ARTICLE -->
-  <section class="section" id="bg1">
+  <section class="section" class="bg1">
       <div class="columns is-centered">
           <div class="column is-8">
               <!-- START FEATURED ARTICLE PREVIEW-->
