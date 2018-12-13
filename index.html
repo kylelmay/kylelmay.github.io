@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
   <script async type="text/javascript" src="js/bulma.js"></script>
+  <style>
+  .cert {
+    width: 620px;
+    height: 550px;
+  }
+  </style>
 </head>
 
 <body>
@@ -319,13 +325,30 @@
                 <div class="card-content skills-content">
                 <h3 class="title is-4">Certifications</h3>
                 <a href="#aboutInfo">
-                  <span class="tag is-danger">CompTIA A+</span>
+                    <span class="tag is-danger" onclick="APlus.apluspdf.openAPlus()">CompTIA A+</span>
+                    <div class="modal" id="APlus">
+                        <div onclick="APlus.apluspdf.closeAPlus()" class="modal-background"></div>
+                        <div class="modal-content">
+                            <object width="1000" height="700" data="assets/a+.pdf" class="cert"></object>
+                        </div>
+                        <button class="modal-close is-large" aria-label="close" onclick="APlus.apluspdf.closeAPlus()"></button>
+                    </div>
+                </a>
+                <a href="#aboutInfo">
+                    <span class="tag is-warning" onclick="linuxPro.linuxpdf.openLinuxPro()">Linux Pro</span>
+                    <div class="modal" id="linuxPro">
+                        <div onclick="linuxPro.linuxpdf.closeLinuxPro()" class="modal-background"></div>
+                        <div class="modal-content">
+                            <object width="1000" height="700" data="assets/linuxpro.pdf" class="cert"></object>
+                        </div>
+                        <button class="modal-close is-large" aria-label="close" onclick="linuxPro.linuxpdf.closeLinuxPro()"></button>
+                    </div>
                 </a>
                 <a href="#aboutInfo">
                   <span class="tag is-warning">Google AdWords Search</span>
                 </a>
                 <a href="#aboutInfo">
-                  <span class="tag is-warning">Google AdWords Video</span>
+                  <span class="tag is-warning" onclick="certs.cert.open()">Google AdWords Video</span>
                 </a>
                 <a href="#aboutInfo">
                   <span class="tag is-warning">Google AdWords Display</span>
